@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript">
 		 $(document).ready(function(){
-		 	
+
 		 });
 		</script>
 	</head>
@@ -14,6 +14,33 @@
 		<div>
 			<input type="text" ng-model="yourName" placeholder="Enter a name">
 			<h1>Hello, {{name}} </h1>
+			<h3>Realtime: {{yourName}}</h3>
+		</div>
+		Expressions
+		<div ng-app="mySecondApp" ng-init="quantity=1; price=1">
+			<input type='number' ng-model="quantity" placeholder="Enter quantity">
+			<input type='number' ng-model="price" placeholder="Enter price">
+			Total in dollar:{{quantity*price}}
+		</div>
+		ng-repeat
+		<div ng-app="" ng-init="names=['James','Tim','Chloe','Eric']">
+			<ul>
+				<li ng-repeat="x in names">
+				{{x}}
+				</li>
+			</ul>
+		</div>
+		ng-controller
+		<div ng-controller="myController">
+			<p ng-bind="person.controller_name"></p>
+		</div>
+		ng-parent and child controller
+		<div ng-controller="parentController">
+			<div ng-controller="childController">
+				<input type="text" ng-model="person.name" placeholder="Name">
+				<a ng-click="sayHello()">Say Hello</a>
+			</div>
+			{{person}}
 		</div>
 	</body>
 </html>

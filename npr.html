@@ -1,0 +1,15 @@
+<!doctype=html>
+<html ng-app="npr">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script type="text/javascript" src="js/npr.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div ng-controller="PlayerController" class="wrapper">
+		<a class="button" ng-click="play()" >Play</a>
+		<a class="button alert" ng-click="stop()" >Stop</a>
+		Playing audio: <b>{{ playing }}</b>
+	</div>
+</body>
+</html>
